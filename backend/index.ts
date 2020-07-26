@@ -19,13 +19,14 @@ const { HOST, PORT } = process.env;
 const app: Express = express();
 
 // Settings
-app.set('port', PORT || 4000);
+app.set('port', parseInt(PORT) || 4000);
 
 // Middleware
 app.use(helmet());
 app.use(compression());
 app.use('/', express.static(path.join(__dirname, './frontend')));
 
+// Start app
 app.listen(app.get('port'), () => {
     console.log(HOST || 'http://localhost' + ':%d', app.get('port'));
 });
