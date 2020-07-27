@@ -1,32 +1,14 @@
-// Environment variables
-import dotenv from 'dotenv';
-dotenv.config();
+import { HOST } from './services/secrets';
+import db from './services/mongoose';
+import app from './services/express';
 
-// Modules
-import compression from 'compression';
-import express from 'express';
-import helmet from 'helmet';
-// import mongoose from 'mongoose';
-// import passport from 'passport';
-import path from 'path';
-// import session from 'express-session';
-
-// Interfaces
-import { Express } from 'express';
-
-// Local variables
-const { HOST, PORT } = process.env;
-const app: Express = express();
-
-// Settings
-app.set('port', parseInt(PORT) || 4000);
-
-// Middleware
-app.use(helmet());
-app.use(compression());
-app.use('/', express.static(path.join(__dirname, './frontend')));
-
-// Start app
-app.listen(app.get('port'), () => {
-    console.log(HOST || 'http://localhost' + ':%d', app.get('port'));
-});
+(async () => {
+    try {
+        await db;
+        app.listen(app.get('port'), () => {
+            console.log((HOST || 'http://localhost') + ':%d', app.get('port'));
+        });
+    } catch (error) {
+        console.error(error);
+    }
+})();
