@@ -6,6 +6,10 @@ A backend capable of CRUD operations using GraphQL, Apollo and MongoDB.
 - [MongoDB](https://www.mongodb.com/)
 
 ## Instructions
+Copy environment variables.
+```
+cp sample.env .env
+```
 Install dependencies.
 ```
 npm i
