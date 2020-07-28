@@ -12,7 +12,6 @@ app.set('port', parseInt(PORT) || 4000);
 
 app.use(helmet());
 app.use(compression());
-app.use('/', express.static(path.join(__dirname, './frontend')));
 
 apollo.applyMiddleware({ app });
 
