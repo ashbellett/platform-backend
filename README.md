@@ -1,5 +1,5 @@
 # platform-backend
-A backend capable of CRUD operations using GraphQL.
+A backend capable of CRUD operations using GraphQL, Apollo and MongoDB.
 
 ## Dependencies
 Node.js
