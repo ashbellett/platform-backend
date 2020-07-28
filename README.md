@@ -6,13 +6,14 @@ A backend capable of CRUD operations using GraphQL, Apollo and MongoDB.
 - [MongoDB](https://www.mongodb.com/)
 
 ## Instructions
-Copy environment variables.
-```
-cp sample.env .env
-```
 Install dependencies.
 ```
 npm i
+```
+### Development
+Copy environment variables.
+```
+cp sample.env .env
 ```
 Lint code.
 ```
@@ -22,6 +23,7 @@ Run in development mode.
 ```
 npm run dev
 ```
+### Production
 Transpile Typescript to Javascript.
 ```
 npm run build
