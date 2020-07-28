@@ -1,8 +1,9 @@
 # platform-backend
-The backend of my platform project.
+A backend capable of CRUD operations using GraphQL.
 
 ## Dependencies
 Node.js
+MongoDB
 
 ## Instructions
 Install dependencies.
