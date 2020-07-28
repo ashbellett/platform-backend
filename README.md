@@ -2,8 +2,8 @@
 A backend capable of CRUD operations using GraphQL, Apollo and MongoDB.
 
 ## Dependencies
-Node.js
-MongoDB
+- [Node.js](https://nodejs.org/)
+- [MongoDB](https://www.mongodb.com/)
 
 ## Instructions
 Install dependencies.
