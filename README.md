@@ -22,7 +22,7 @@ Transpile Typescript to Javascript.
 ```
 npm run build
 ```
-Run built app.
+Run in production mode (requires previous build step).
 ```
 npm run start
 ```
