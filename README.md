@@ -26,3 +26,8 @@ Run built app.
 ```
 npm run start
 ```
+
+## Defaults
+- Accessible on http://localhost:4000/graphql.
+- MongoDB connection URI is mongodb://localhost:27017/test.
+- Apollo playground accessible in development mode only.
