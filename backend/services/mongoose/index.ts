@@ -1,9 +1,9 @@
-import { DATABASE } from '../secrets';
+import { MONGODB_URI } from '../secrets';
 import mongoose from 'mongoose';
 
 mongoose.set('useFindAndModify', false);
 
-export default mongoose.connect(DATABASE, {
+export default mongoose.connect(MONGODB_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
