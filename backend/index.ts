@@ -6,7 +6,7 @@ import app from './services/express';
     try {
         await db;
         app.listen(app.get('port'), () => {
-            console.log((HOST || 'http://localhost') + ':%d', app.get('port'));
+            console.log((HOST || 'http://localhost') + ':%d' + '/graphql', app.get('port'));
         });
     } catch (error) {
         console.error(error);
