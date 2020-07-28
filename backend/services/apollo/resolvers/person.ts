@@ -1,5 +1,4 @@
 import { Person } from '../../mongoose/models';
-import { DocumentQuery, Document } from 'mongoose';
 
 export default {
     Query: {
@@ -28,11 +27,9 @@ export default {
         },
         delete: (root, args, content, info) => {
             if (Person.exists({ _id: args.id })) {
-                return Person.findByIdAndDelete(
-                    {
-                        _id: args.id
-                    }
-                );
+                return Person.findByIdAndDelete({
+                    _id: args.id
+                });
             }
         }
     }
