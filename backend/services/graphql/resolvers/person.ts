@@ -2,20 +2,25 @@ import { Person } from '../../database/models';
 
 export default {
     Query: {
-        persons: (root, args, content, info) => {
+        persons: (parent, args, context, info) => {
             return Person.find({});
         },
-        person: (root, { id }, content, info) => {
+        person: (parent, { id }, context, info) => {
             if (Person.exists({ _id: id })) {
                 return Person.findById(id);
             }
         }
     },
     Mutation: {
-        create: (root, args, content, info) => {
+        create: (parent, args, context, info) => {
             return Person.create(args);
         },
-        update: (root, args, content, info) => {
+        update: (parent, args, context, info) => {
+            if (context.user) {
+                console.log('Authorised: ', context.user);
+            } else {
+                console.log({ context });
+            }
             if (Person.exists({ _id: args.id })) {
                 return Person.findByIdAndUpdate(
                     {
@@ -25,7 +30,7 @@ export default {
                 );
             }
         },
-        delete: (root, args, content, info) => {
+        delete: (parent, args, context, info) => {
             if (Person.exists({ _id: args.id })) {
                 return Person.findByIdAndDelete({
                     _id: args.id

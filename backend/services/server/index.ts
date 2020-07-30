@@ -43,8 +43,7 @@ app.post(
 
 app.get('/', function (request: any, response: any) {
     response.json({
-        user: request.user,
-        sessionId: request.sessionId
+        user: request.user
     });
 });
 

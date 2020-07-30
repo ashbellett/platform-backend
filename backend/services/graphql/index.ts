@@ -7,5 +7,6 @@ import resolvers from './resolvers';
 export default new ApolloServer({
     typeDefs,
     resolvers,
+    context: ({ req }) => ({ req }),
     playground: NODE_ENV === 'development'
 });
