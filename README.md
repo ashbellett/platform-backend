@@ -4,8 +4,10 @@ A backend capable of CRUD operations using GraphQL, Apollo and MongoDB.
 ## Dependencies
 - [Node.js](https://nodejs.org/)
 - [MongoDB](https://www.mongodb.com/)
+- [Redis](https://redis.io/)
 
 ## Instructions
+Ensure a MongoDB and Redis store are running.  
 Install dependencies.
 ```
 npm i
