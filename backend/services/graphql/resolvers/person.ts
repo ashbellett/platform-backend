@@ -1,4 +1,4 @@
-import { Person } from '../../mongoose/models';
+import { Person } from '../../database/models';
 
 export default {
     Query: {

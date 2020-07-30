@@ -7,8 +7,8 @@ export default gql`
     }
 
     type Mutation {
-        create(name: String!): Person!
-        update(id: ID!, name: String!): Person
+        create(name: String!, email: String!, password: String!): Person!
+        update(id: ID!): Person
         delete(id: ID!): Person
     }
 
@@ -19,5 +19,9 @@ export default gql`
     type Person {
         id: ID!
         name: String!
+        email: String!
+        password: String!
+        birth: String
+        about: String
     }
 `;
