@@ -7,7 +7,7 @@ A backend capable of CRUD operations using GraphQL, Apollo and MongoDB.
 - [Redis](https://redis.io/)
 
 ## Instructions
-Ensure a MongoDB and Redis store are running.  
+Ensure a MongoDB database and Redis memory store are running in host environment.
 Install dependencies.
 ```
 npm i
