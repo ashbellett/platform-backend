@@ -1,5 +1,4 @@
 import { SESSION_SECRET } from '../secrets';
-
 import connectRedis from 'connect-redis';
 import redis from 'redis';
 import session from 'express-session';
@@ -8,7 +7,7 @@ const RedisStore = connectRedis(session);
 const redisClient = redis.createClient();
 
 export default session({
-    name: 'sessionId',
+    name: 'sid',
     store: new RedisStore({ client: redisClient }),
     secret: SESSION_SECRET,
     resave: false,

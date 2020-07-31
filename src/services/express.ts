@@ -1,8 +1,8 @@
 import { PORT, GRAPHQL_ENDPOINT } from '../secrets';
 
-import passport from '../authentication';
-import apollo from '../graphql';
-import session from '../session';
+import { apollo } from '.';
+import { passport } from '../middleware';
+import { session } from '../middleware';
 
 import compression from 'compression';
 import express from 'express';
@@ -43,6 +43,7 @@ app.post(
 
 app.get('/', function (request: any, response: any) {
     response.json({
+        session: request.session,
         user: request.user
     });
 });

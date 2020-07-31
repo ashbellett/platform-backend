@@ -1,7 +1,7 @@
 {
   "name": "platform-backend",
   "version": "0.1.0",
-  "description": "The backend of my platform project.",
+  "description": "A backend capable of authenticated CRUD operations using GraphQL, Apollo, MongoDB and Redis.",
   "private": true,
   "main": "build/index.js",
   "engines": {
@@ -10,8 +10,8 @@
   },
   "scripts": {
     "build": "eslint . --ext .js,.ts,.tsx --fix && tsc",
-    "debug": "nodemon --inspect=4001 ./backend/index.ts",
-    "dev": "nodemon ./backend/index.ts",
+    "debug": "nodemon --inspect=4001 ./src/index.ts",
+    "dev": "nodemon ./src/index.ts",
     "start": "node build/index.js",
     "lint": "eslint . --ext .js,.ts,.tsx --fix",
     "test": ""
@@ -31,8 +31,7 @@
   "homepage": "https://github.com/ashbellett/platform-backend#readme",
   "dependencies": {
     "apollo-server-express": "^2.16.0",
-    "bcrypt": "^5.0.0",
-    "body-parser": "^1.19.0",
+    "argon2": "^0.26.2",
     "compression": "^1.7.4",
     "connect-redis": "^5.0.0",
     "express": "^4.17.1",
@@ -45,8 +44,6 @@
     "redis": "^3.0.2"
   },
   "devDependencies": {
-    "@types/bcrypt": "^3.0.0",
-    "@types/body-parser": "^1.19.0",
     "@types/compression": "^1.7.0",
     "@types/connect-redis": "0.0.14",
     "@types/express": "^4.17.7",

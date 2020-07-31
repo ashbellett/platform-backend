@@ -1,4 +1,4 @@
-import { Person } from '../database/models';
+import { Person } from '../models';
 
 import passport from 'passport';
 import { Strategy as LocalStrategy } from 'passport-local';

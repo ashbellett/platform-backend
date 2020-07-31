@@ -1,4 +1,4 @@
-import { Person } from '../../database/models';
+import { Person } from '../models';
 
 export default {
     Query: {

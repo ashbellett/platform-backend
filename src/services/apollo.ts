@@ -1,8 +1,8 @@
 import { NODE_ENV } from '../secrets';
+import typeDefs from '../typeDefs';
+import resolvers from '../resolvers';
 
 import { ApolloServer } from 'apollo-server-express';
-import typeDefs from './typeDefs';
-import resolvers from './resolvers';
 
 export default new ApolloServer({
     typeDefs,

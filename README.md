@@ -1,5 +1,5 @@
 # platform-backend
-A backend capable of CRUD operations using GraphQL, Apollo and MongoDB.
+A backend capable of authenticated CRUD operations using GraphQL, Apollo, MongoDB and Redis.
 
 ## Dependencies
 - [Node.js](https://nodejs.org/)
@@ -7,7 +7,7 @@ A backend capable of CRUD operations using GraphQL, Apollo and MongoDB.
 - [Redis](https://redis.io/)
 
 ## Instructions
-Ensure a MongoDB database and Redis memory store are running in host environment.
+Ensure a MongoDB database and Redis memory store are running in the host environment.
 Install dependencies.
 ```
 npm i
